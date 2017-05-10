@@ -18,9 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var helloWorldLabel: UILabel!
     
     @IBAction func buttonClicked(_ sender: Any) {
-        print(text1)
-        print(text1.text!)
-        print(text2.text!)
+        helloWorldLabel.text = "Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
         
     }
     
