@@ -11,20 +11,17 @@ import UIKit
 class ViewController: UIViewController {
     var clickCount = 0
     
+    @IBOutlet weak var text2: UITextField!
+    
+    @IBOutlet weak var text1: UITextField!
     
     @IBOutlet weak var helloWorldLabel: UILabel!
     
     @IBAction func buttonClicked(_ sender: Any) {
+        print(text1)
+        print(text1.text!)
+        print(text2.text!)
         
-        clickCount += 1
-        print(clickCount)
-        if clickCount >= 10{
-            helloWorldLabel.text = "you clicked the button \(clickCount) times"
-        }
-    }
-    
-    @IBAction func button2Clicked(_ sender: Any) {
-        helloWorldLabel.text = "Dammit Jim, I'm a doctor!"
     }
     
     override func viewDidLoad() {
