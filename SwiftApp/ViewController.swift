@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     var clickCount = 0
     
+    @IBOutlet weak var addSwitch: UISwitch!
+    
     @IBOutlet weak var text2: UITextField!
     
     @IBOutlet weak var text1: UITextField!
@@ -18,7 +20,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var helloWorldLabel: UILabel!
     
     @IBAction func buttonClicked(_ sender: Any) {
-        helloWorldLabel.text = "Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
+        let addition = addSwitch.isOn
+       
+        if addition{
+            helloWorldLabel.text = "Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
+        }
+        else{
+            helloWorldLabel.text = "Answer: \(Double(text1.text!)! - Double(text2.text!)!)"
+        }
+        
         
     }
     
